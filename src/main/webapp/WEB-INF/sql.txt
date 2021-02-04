@@ -1,0 +1,86 @@
+create table member (
+    id varchar2(20) primary key,
+    password varchar2(30) not null,
+    name varchar2(30) not null,
+    nickname varchar2(30) not null,
+    birthday varchar2(14) not null,
+    gender number not null,
+    phone varchar2(20) not null,
+    email varchar2(50) not null,
+    address1 varchar(200),
+    address2 varchar(200),
+    zipcode number
+);
+
+create sequence product_sequence;
+
+create table product (
+    productNo number primary key,
+    productName varchar2(100) not null,
+    productPrice number not null,
+    schedule varchar2(20) not null,
+    city varchar2(20) not null,
+    country varchar2(20) not null);
+
+create sequence order_sequence;
+
+create table order_product (
+    orderNo number primary key,
+    productNo number not null,
+    orderDate Date not null,
+    id varchar2(20) not null,
+    quantity number not null,
+	FOREIGN KEY (id) REFERENCES member(id),
+    FOREIGN KEY (productNo) REFERENCES product(productNo)
+);
+
+create sequence review_sequence;
+
+create table review_board (
+    reviewNo number primary key,
+    reviewTitle varchar2(50) not null,
+    reviewContent varchar2(3000) not null,
+    reviewDate Date not null,
+    id varchar2(20) not null,
+    orderNo number not null,
+    FOREIGN KEY (id) REFERENCES member(id),
+    FOREIGN KEY (orderNo) REFERENCES order_product(orderNo));
+
+create sequence qna_sequence;
+
+create table qna_board (
+    qnaNo number primary key,
+    reviewTitle varchar2(50) not null,
+    reviewContent varchar2(3000) not null,
+    reviewDate Date not null,
+    id varchar2(20) not null,
+    orderNo number not null,
+    FOREIGN KEY (id) REFERENCES member(id));
+
+create sequence review_reply_sequence;
+
+create table review_reply (
+    replyNo number primary key,
+    replier varchar2(30) not null,
+    reply varchar2(300) not null,
+    reviewNo number not null,
+    FOREIGN KEY (reviewNo) REFERENCES review_board(reviewNo));
+    
+create sequence qna_reply_sequence;
+
+create table qna_reply (
+    replyNo number primary key,
+    replier varchar2(30) not null,
+    reply varchar2(300) not null,
+    qnaNo number not null,
+    FOREIGN KEY (qnaNo) REFERENCES qna_board(qnaNo));
+
+create sequence cart_sequence;
+
+create table cart (
+    cartNo number primary key,
+    productNo number not null,
+    id varchar2(20) not null,
+    quantity number not null,
+    FOREIGN KEY (id) REFERENCES member(id),
+    FOREIGN KEY (productNo) REFERENCES product(productNo));
