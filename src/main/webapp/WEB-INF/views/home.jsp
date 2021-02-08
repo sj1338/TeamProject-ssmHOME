@@ -193,7 +193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <img alt='여행자 사진' class='img-circle' src='//d2yoing0loi5gh.cloudfront.net/assets/default/user_profile_image-414acc60b27f0a258bec14c82b70dc361fc6768da9289f924f887bec1fc33849.png' width='80'>
 </div>
 <div class='username'>
-신승민
+이름불러오는 SQL
 </div>
 <div class='text-md setting hide-on-mobile'>
 <img alt='프로필 관리' class='icon item-inline' height='11px' src='https://d2yoing0loi5gh.cloudfront.net/assets/kitty/traveler/reservation/ic_setting@2x-832c08d9d38f208502f94e8d35e78a320024fc5f61630f2eba7801845e1eda78.png' width='11px'>
@@ -202,7 +202,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div class='promotion-container box clearfix'>
 <div class='item'>
-<div class='item-header text-md'>내 포인트</div>
+<div class='item-header text-md'>내 포인트(이 영역 지울거임)</div>
 <div class='item-count text-md'>
 <a href='/traveler/points'>
 0원
@@ -211,7 +211,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 <div class='item'>
-<div class='item-header text-md'>내 쿠폰</div>
+<div class='item-header text-md'>내 쿠폰(이 영역 지울거임)</div>
 <div class='item-count text-md'>
 <a href='/traveler/coupons?status=enable'>
 1장
@@ -223,7 +223,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href='/invite_friends'>
 <div class='box invite-friends-container'>
 <img alt='intive_friends' height='24px' src='https://d2yoing0loi5gh.cloudfront.net/assets/kitty/invite_friends/ic_wishlistbox@2x-80048ea84a241b58b254fdfeb18c9cc87eb8417f43f9e0628fb0454881b25be4.png' width='24px'>
-<div class='text'><span>친구 초대하고</span><span class='accent'>&nbsp;2,000포인트&nbsp;</span><span>받기!</span></div>
+<div class='text'><span>친구 초대하고(이 영역 지울거임)</span><span class='accent'>&nbsp;2,000포인트&nbsp;</span><span>받기!</span></div>
 </div>
 </a>
 </div>
@@ -243,7 +243,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </form>
 
-<div class='text'>신승민</div>
+<div class='text'>이름불러오는 SQL</div>
 </div>
 <div class='member-wrapper'>
 <form id="account-edit-form" data-validation="true" action="/traveler/account" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="jGd1nW84IBtE3rGY7f7Tw4tPHdcuE1DMCM9JTGFeKWkVV4LR/H3IedhdwbR542JzaePQgd7BIPUsYYv4iCbluw==" />
@@ -252,14 +252,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class='input-wrapper text-middle'>
 <div class='row'>
 <div class='col-xs-12'>
-<input class='form-control text-content' name='user[username]' readonly type='text' value='신승민'>
+<input class='form-control text-content' name='user[username]' readonly type='text' value='이름불러오는 SQL'>
 </div>
 </div>
 </div>
 </div>
 <div class='form-group'>
 <div class='title text-middle'>이메일</div>
-<div class='input-wrapper text-middle'>id177@naver.com</div>
+<div class='input-wrapper text-middle'>이멜불러오는 SQL</div>
 <input type='hidden' value='id177@naver.com'>
 <a class="text-link text-link-margin hide-on-editable" data-gtm-category="프로필" data-gtm-action="인증하기" data-turbolinks="false" href="/users/verifications/email?previous=account&amp;type=email_new">인증하기</a>
 <a class="show-on-editable text-link text-link-margin" data-gtm-category="프로필" data-gtm-action="인증하기" data-turbolinks="false" href="/users/verifications/email?previous=account&amp;type=email_new">인증하기</a>
@@ -268,7 +268,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class='title text-middle'>연락처</div>
 <div class='input-wrapper text-middle'>
 +82
-01020111338
+연락처불러오는 SQL
 </div>
 <div class='label-verified hide-on-editable'>
 인증완료
@@ -276,7 +276,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a class="show-on-editable text-link text-link-margin" data-gtm-category="프로필" data-gtm-action="연락처 변경하기" data-turbolinks="false" href="/users/verifications/phone?previous=account&amp;type=phone_change">연락처 변경하기</a>
 </div>
 <div class='form-group form-subscription-group'>
-<div class='title text-middle'>SNS 연동</div>
+<div class='title text-middle'>SNS 연동(지울거임)</div>
 <div class='input-wrapper text-middle input-wrapper--block'>
 <script type="application/json" id="js-react-on-rails-context">{"railsEnv":"production","inMailer":false,"i18nLocale":"ko","i18nDefaultLocale":"ko","rorVersion":"11.0.9","rorPro":false,"href":"https://www.myrealtrip.com/traveler/account","location":"/traveler/account","scheme":"https","host":"www.myrealtrip.com","port":null,"pathname":"/traveler/account","search":null,"httpAcceptLanguage":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","serverSide":false}</script>
 <div id="OAuthConnector-react-component-e7fffbb6-ce3e-41cd-a874-777b5cc26591"></div>
@@ -337,7 +337,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 </div>
-<div class='recent-edit-text show-on-editable'>최근 수정일: 2021-02-08</div>
+<div class='recent-edit-text show-on-editable'>최근 수정일: 최근수정일 YYYY-MM-HH로 불러오는 SQL</div>
 </div>
 </div>
 
