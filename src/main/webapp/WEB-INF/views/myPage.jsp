@@ -39,7 +39,9 @@
 <link rel="shortcut icon" type="image/x-icon" href="https://d2yoing0loi5gh.cloudfront.net/assets/favicon-e7fc64f202376533d86106e6f712ed41eee1e843dbc5de3b2765938656f8eb93.ico" />
 <script src="https://d2yoing0loi5gh.cloudfront.net/assets/kitty/ko-3f7b6adabe9f9b67bbd3dbfeaa7b4b9bc572e349d01a52d44e3178257a9a6880.js"></script>
 <link rel="stylesheet" media="screen" href="${root }/resources/assets/css/main.css" />
-<link rel="stylesheet" media="screen" href="${root }/resources/assets/css/idkScreen1.css" />
+<link rel="stylesheet" media="screen" href="${root }/resources/assets/css/common.css" />
+<link rel="stylesheet" media="screen" href="${root }/resources/assets/css/reset.css" />
+<%-- <link rel="stylesheet" media="screen" href="${root }/resources/assets/css/idkScreen1.css" /> --%>
 <link rel="stylesheet" media="all" href="${root }/resources/assets/css/idkAll1.css" />
 <link rel="stylesheet" media="all" href="${root }/resources/assets/css/idkAll2.css" />
 <script src="https://d2yoing0loi5gh.cloudfront.net/webpack/vendor.e9a9ebfa8b3c65b227ec.js"></script>

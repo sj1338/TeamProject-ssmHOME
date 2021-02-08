@@ -33,7 +33,7 @@ public class MyPageController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "myPage";
+		return "test";
 	}
 	
 }
