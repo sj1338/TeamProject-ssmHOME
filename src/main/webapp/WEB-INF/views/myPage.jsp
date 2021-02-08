@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8"%>
-  <%@ taglib prefix="u" tagdir="/WEB-INF/tags"%>
+<%@ taglib prefix="u" tagdir="/WEB-INF/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +20,7 @@
 ' name='description'>
 
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="3FSh/msQnAO8iEqQlxIp4MpKDbD7qAY8pviVIlmF6NRFZFay+FV0YSALOrwDD5hQKObA5gt6dgWCVleWsP0kBg==" />
+<meta name="csrf-token" content="qGvxzIgrKFAGk8LNPboKosXy8JJY2ctngYZEy2ExVltU4uBFkro86DweOWcxf2f2DxKve2vkAnNR+qGoqdek3A==" />
 <meta content='113823448739791' property='fb:app_id'>
 <meta content='122600525' property='fb:admins'>
 <meta content='마이리얼트립' property='og:site_name'>
@@ -38,18 +38,17 @@
 <script src="//static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
 <link rel="shortcut icon" type="image/x-icon" href="https://d2yoing0loi5gh.cloudfront.net/assets/favicon-e7fc64f202376533d86106e6f712ed41eee1e843dbc5de3b2765938656f8eb93.ico" />
 <script src="https://d2yoing0loi5gh.cloudfront.net/assets/kitty/ko-3f7b6adabe9f9b67bbd3dbfeaa7b4b9bc572e349d01a52d44e3178257a9a6880.js"></script>
-<link rel="stylesheet" media="screen" href="${root }/resources/assets/css/main.css" />
-<link rel="stylesheet" media="screen" href="${root }/resources/assets/css/common.css" />
-<link rel="stylesheet" media="screen" href="${root }/resources/assets/css/reset.css" />
-<%-- <link rel="stylesheet" media="screen" href="${root }/resources/assets/css/idkScreen1.css" /> --%>
-<link rel="stylesheet" media="all" href="${root }/resources/assets/css/idkAll1.css" />
-<link rel="stylesheet" media="all" href="${root }/resources/assets/css/idkAll2.css" />
+<link rel="stylesheet" media="screen" href="https://d2ur7st6jjikze.cloudfront.net/extra/css/main.css" />
+<link rel="stylesheet" media="screen" href="https://d2yoing0loi5gh.cloudfront.net/webpack/0.e9a9ebfa8b3c65b227ec.css" />
+<link rel="stylesheet" media="all" href="https://d2yoing0loi5gh.cloudfront.net/assets/kitty/application_template-de4b46d803183faabde80789fd23fd7db887a0e61571b261fc5ad239dd577c77.css" />
+<link rel="stylesheet" media="all" href="https://d2yoing0loi5gh.cloudfront.net/assets/kitty/application-feda0d1003238b011998895d44297ec676815f98a786862936880b10025cc15c.css" />
 <script src="https://d2yoing0loi5gh.cloudfront.net/webpack/vendor.e9a9ebfa8b3c65b227ec.js"></script>
 <script src="https://d2yoing0loi5gh.cloudfront.net/webpack/polyfill.e9a9ebfa8b3c65b227ec.js"></script>
-<link rel="stylesheet" media="screen" href="${root }/resources/assets/css/idkScreen2.css" />
+<!-- 이게 진짜css -->
+<link rel="stylesheet" media="screen" href="https://d2yoing0loi5gh.cloudfront.net/webpack/application.e9a9ebfa8b3c65b227ec.css" />
 <script src="https://d2yoing0loi5gh.cloudfront.net/webpack/application.e9a9ebfa8b3c65b227ec.js"></script>
 <!--[if lte ie 9]>
-<link rel="stylesheet" media="screen" href="${root }/resources/assets/css/idkAll3.css" />
+<link rel="stylesheet" media="all" href="https://d2yoing0loi5gh.cloudfront.net/assets/kitty/ie-16402514716c8654054c7eb624080a7bf63afd04730c81f23cc814236dc0891a.css" />
 <![endif]-->
 <script src="https://d2yoing0loi5gh.cloudfront.net/assets/kitty/application-5471a0ce38324443014b4bba02f9c788c0426307ae36400334bdc1f80c26eb75.js"></script>
 <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDIKCScTCOK-yllVbHvDboEnpKtKDs2vFU&amp;libraries=places&amp;language=ko" async="async" defer="defer"></script>
@@ -181,11 +180,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class='global-alert-box'>
 </div>
 
-<!--   <div style="position: relative" class="mrt-default-components" id="Header-react-component-38a481ca-6aeb-426e-8165-379e3cce867e"></div>
-      <script type="application/json" class="js-react-on-rails-component" data-component-name="Header" data-dom-id="Header-react-component-38a481ca-6aeb-426e-8165-379e3cce867e">{"user":{"id":3568744,"username":"신승민","email":"id177@naver.com","point":"0원","numberOfCoupons":"1장","profile_image":{"urls":{"original":"//d2yoing0loi5gh.cloudfront.net/assets/default/user_profile_image-414acc60b27f0a258bec14c82b70dc361fc6768da9289f924f887bec1fc33849.png","large":"//d2yoing0loi5gh.cloudfront.net/assets/default/user_profile_image-414acc60b27f0a258bec14c82b70dc361fc6768da9289f924f887bec1fc33849.png","medium":"//d2yoing0loi5gh.cloudfront.net/assets/default/user_profile_image-414acc60b27f0a258bec14c82b70dc361fc6768da9289f924f887bec1fc33849.png","small":"//d2yoing0loi5gh.cloudfront.net/assets/default/user_profile_image-414acc60b27f0a258bec14c82b70dc361fc6768da9289f924f887bec1fc33849.png","thumb":"//d2yoing0loi5gh.cloudfront.net/assets/default/user_profile_image-414acc60b27f0a258bec14c82b70dc361fc6768da9289f924f887bec1fc33849.png"}},"guideId":null,"isLodgingGuide":null,"isAffiliation":null,"role":null},"lnbVerticalItems":[{"id":1,"code":"flights","title":"항공권","lnb_required_badge":false,"link":{"mobile_web":"https://flights.myrealtrip.com/","desktop":"https://flights.myrealtrip.com/"},"position":1,"level":1},{"id":10,"code":"accommodations","title":"숙소","lnb_required_badge":false,"link":{"mobile_web":"https://www.myrealtrip.com/campaigns/accommodation_main","desktop":"https://www.myrealtrip.com/campaigns/accommodation_main"},"position":2,"level":1},{"id":11,"code":"transportation","title":"렌터카・교통","lnb_required_badge":false,"link":{"mobile_web":"https://www.myrealtrip.com/campaigns/jejurent","desktop":"https://www.myrealtrip.com/campaigns/jejurent"},"position":3,"level":1},{"id":3,"code":"tour_ticket","title":"투어・티켓","lnb_required_badge":false,"link":{"mobile_web":"https://www.myrealtrip.com/experiences/","desktop":"https://www.myrealtrip.com/experiences/"},"position":7,"level":1},{"id":7,"code":"lantour","title":"랜선투어","lnb_required_badge":false,"link":{"mobile_web":"https://www.myrealtrip.com/q/%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4","desktop":"https://www.myrealtrip.com/q/%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4"},"position":8,"level":2},{"id":5,"code":"discount","title":"할인혜택","lnb_required_badge":false,"link":{"mobile_web":"https://www.myrealtrip.com/campaigns/mrtcoupon","desktop":"https://www.myrealtrip.com/campaigns/mrtcoupon"},"position":11,"level":2}],"mainVerticalItems":[{"id":1,"code":"flights","title":"항공권","position":1,"badge":"","badge_style":"","link":{"mobile_web":"https://flights.myrealtrip.com/","desktop":"https://flights.myrealtrip.com/","mobile":"mrt://flights"},"cms_icon_id":49,"cms_icon_code":"ic_flight_40x40","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/49_original_1608700445.png?1608700445","level":1},{"id":10,"code":"accommodations","title":"숙소","position":2,"badge":"","badge_style":"","link":{"mobile_web":"https://www.myrealtrip.com/campaigns/accommodation_main","desktop":"https://www.myrealtrip.com/campaigns/accommodation_main","mobile":"mrt://web?url=https%3a%2f%2fwww.myrealtrip.com%2finstants%2fcampaigns%2faccommodation_main"},"cms_icon_id":50,"cms_icon_code":"ic_bnb_40x40","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/50_original_1608701561.png?1608701561","level":1},{"id":11,"code":"transportation","title":"렌터카・교통","position":3,"badge":"","badge_style":"","link":{"mobile_web":"https://www.myrealtrip.com/campaigns/jejurent","desktop":"https://www.myrealtrip.com/campaigns/jejurent","mobile":"mrt://web?url=https%3a%2f%2fwww.myrealtrip.com%2finstants%2fcampaigns%2fjejurent"},"cms_icon_id":52,"cms_icon_code":"ic_rentacar_40x40","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/52_original_1608701643.png?1608701643","level":1},{"id":3,"code":"tour_ticket","title":"투어・티켓","position":7,"badge":"","badge_style":"","link":{"mobile_web":"https://www.myrealtrip.com/experiences/","desktop":"https://www.myrealtrip.com/experiences/","mobile":"mrt://experiences"},"cms_icon_id":18,"cms_icon_code":"ic_tour_sm","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/18_original_1592284955.png?1592284955","level":1},{"id":7,"code":"lantour","title":"랜선투어","position":8,"badge":"","badge_style":"solid","link":{"mobile_web":"https://www.myrealtrip.com/q/%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4","desktop":"https://www.myrealtrip.com/q/%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4","mobile":"mrt://search?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4"},"cms_icon_id":53,"cms_icon_code":"ic_lantour_40x40","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/53_original_1608701669.png?1608701669","level":2},{"id":5,"code":"discount","title":"할인혜택","position":11,"badge":"","badge_style":"","link":{"mobile_web":"https://www.myrealtrip.com/campaigns/mrtcoupon","desktop":"https://www.myrealtrip.com/campaigns/mrtcoupon","mobile":"mrt://web?url=https%3a%2f%2fwww.myrealtrip.com%2finstants%2fcampaigns%2fmrtcoupon"},"cms_icon_id":24,"cms_icon_code":"ic_promotion_sm","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/24_original_1592285048.png?1592285048","level":2}],"subVerticalItems":[{"id":7,"code":"lantour","title":"랜선투어","position":8,"badge":"","badge_style":"solid","link":{"mobile_web":"https://www.myrealtrip.com/q/%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4","desktop":"https://www.myrealtrip.com/q/%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4","mobile":"mrt://search?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4"},"cms_icon_id":53,"cms_icon_code":"ic_lantour_40x40","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/53_original_1608701669.png?1608701669","level":2},{"id":5,"code":"discount","title":"할인혜택","position":11,"badge":"","badge_style":"","link":{"mobile_web":"https://www.myrealtrip.com/campaigns/mrtcoupon","desktop":"https://www.myrealtrip.com/campaigns/mrtcoupon","mobile":"mrt://web?url=https%3a%2f%2fwww.myrealtrip.com%2finstants%2fcampaigns%2fmrtcoupon"},"cms_icon_id":24,"cms_icon_code":"ic_promotion_sm","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/24_original_1592285048.png?1592285048","level":2}],"transparent":false,"isRoma":false,"popularCities":[{"rank_name":"basis_rank","pure_rank":1,"city_id":50,"location_name":"제주도","city_key_name":"Jeju","country_key_name":"Korea, Republic of","total_count":152,"confirm_count":135,"cancel_count":17,"reference_rank":1,"weighted_rank":0.006968641114982578,"ranking":1},{"rank_name":"basis_rank","pure_rank":2,"city_id":18,"location_name":"서울","city_key_name":"Seoul","country_key_name":"Korea, Republic of","total_count":15,"confirm_count":14,"cancel_count":1,"reference_rank":2,"weighted_rank":0.13793103448275862,"ranking":2},{"rank_name":"basis_rank","pure_rank":5,"city_id":445,"location_name":"여수","city_key_name":"Yeosu","country_key_name":"Korea, Republic of","total_count":9,"confirm_count":8,"cancel_count":1,"reference_rank":7,"weighted_rank":0.14705882352941177,"ranking":3},{"rank_name":"basis_rank","pure_rank":3,"city_id":287,"location_name":"전라도","city_key_name":"Jeolla-do","country_key_name":"Korea, Republic of","total_count":12,"confirm_count":10,"cancel_count":2,"reference_rank":3,"weighted_rank":0.2727272727272727,"ranking":4},{"rank_name":"basis_rank","pure_rank":8,"city_id":132,"location_name":"대구","city_key_name":"Daegu","country_key_name":"Korea, Republic of","total_count":6,"confirm_count":6,"cancel_count":0,"reference_rank":10,"weighted_rank":0.3333333333333333,"ranking":5},{"rank_name":"basis_rank","pure_rank":4,"city_id":566,"location_name":"경기도","city_key_name":"gyeonggi-do","country_key_name":"Korea, Republic of","total_count":10,"confirm_count":10,"cancel_count":0,"reference_rank":4,"weighted_rank":0.4,"ranking":6},{"rank_name":"basis_rank","pure_rank":6,"city_id":99,"location_name":"강원도","city_key_name":"Gangwondo","country_key_name":"Korea, Republic of","total_count":9,"confirm_count":9,"cancel_count":0,"reference_rank":6,"weighted_rank":0.6666666666666666,"ranking":7},{"rank_name":"basis_rank","pure_rank":7,"city_id":212,"location_name":"경주","city_key_name":"Gyeongju","country_key_name":"Korea, Republic of","total_count":8,"confirm_count":8,"cancel_count":0,"reference_rank":5,"weighted_rank":0.875,"ranking":8},{"rank_name":"basis_rank","pure_rank":14,"city_id":89,"location_name":"김포","city_key_name":"Gimpo","country_key_name":"Korea, Republic of","total_count":2,"confirm_count":2,"cancel_count":0,"reference_rank":18,"weighted_rank":0.875,"ranking":9},{"rank_name":"basis_rank","pure_rank":12,"city_id":2,"location_name":"파주","city_key_name":"Paju","country_key_name":"Korea, Republic of","total_count":2,"confirm_count":2,"cancel_count":0,"reference_rank":14,"weighted_rank":1.5,"ranking":10},{"rank_name":"basis_rank","pure_rank":9,"city_id":285,"location_name":"경상도","city_key_name":"Gyeongsang-do","country_key_name":"Korea, Republic of","total_count":5,"confirm_count":5,"cancel_count":0,"reference_rank":8,"weighted_rank":1.8,"ranking":11},{"rank_name":"basis_rank","pure_rank":10,"city_id":500,"location_name":"고양","city_key_name":"Goyang","country_key_name":"Korea, Republic of","total_count":4,"confirm_count":4,"cancel_count":0,"reference_rank":9,"weighted_rank":2.5,"ranking":12},{"rank_name":"basis_rank","pure_rank":11,"city_id":111,"location_name":"수원","city_key_name":"Suwon","country_key_name":"Korea, Republic of","total_count":3,"confirm_count":3,"cancel_count":0,"reference_rank":11,"weighted_rank":3.6666666666666665,"ranking":13},{"rank_name":"basis_rank","pure_rank":13,"city_id":21,"location_name":"부산","city_key_name":"Busan","country_key_name":"Korea, Republic of","total_count":2,"confirm_count":2,"cancel_count":0,"reference_rank":12,"weighted_rank":6.5,"ranking":14},{"rank_name":"basis_rank","pure_rank":17,"city_id":155,"location_name":"로스엔젤레스","city_key_name":"Los Angeles","country_key_name":"United States of America","total_count":1,"confirm_count":1,"cancel_count":0,"reference_rank":18,"weighted_rank":8.5,"ranking":15}],"b2b":{"status":false,"logo":null},"isError":false}</script>
--->     
-
-<u:navbar/>
+<div style="position: relative" class="mrt-default-components" id="Header-react-component-4c9d2cd5-2179-43e6-a753-063b7f2e8a1a"></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="Header" data-dom-id="Header-react-component-4c9d2cd5-2179-43e6-a753-063b7f2e8a1a">{"user":{"id":3568744,"username":"신승민","email":"id177@naver.com","point":"0원","numberOfCoupons":"1장","profile_image":{"urls":{"original":"//d2yoing0loi5gh.cloudfront.net/assets/default/user_profile_image-414acc60b27f0a258bec14c82b70dc361fc6768da9289f924f887bec1fc33849.png","large":"//d2yoing0loi5gh.cloudfront.net/assets/default/user_profile_image-414acc60b27f0a258bec14c82b70dc361fc6768da9289f924f887bec1fc33849.png","medium":"//d2yoing0loi5gh.cloudfront.net/assets/default/user_profile_image-414acc60b27f0a258bec14c82b70dc361fc6768da9289f924f887bec1fc33849.png","small":"//d2yoing0loi5gh.cloudfront.net/assets/default/user_profile_image-414acc60b27f0a258bec14c82b70dc361fc6768da9289f924f887bec1fc33849.png","thumb":"//d2yoing0loi5gh.cloudfront.net/assets/default/user_profile_image-414acc60b27f0a258bec14c82b70dc361fc6768da9289f924f887bec1fc33849.png"}},"guideId":null,"isLodgingGuide":null,"isAffiliation":null,"role":null},"lnbVerticalItems":[{"id":1,"code":"flights","title":"항공권","lnb_required_badge":false,"link":{"mobile_web":"https://flights.myrealtrip.com/","desktop":"https://flights.myrealtrip.com/"},"position":1,"level":1},{"id":10,"code":"accommodations","title":"숙소","lnb_required_badge":false,"link":{"mobile_web":"https://www.myrealtrip.com/campaigns/accommodation_main","desktop":"https://www.myrealtrip.com/campaigns/accommodation_main"},"position":2,"level":1},{"id":11,"code":"transportation","title":"렌터카・교통","lnb_required_badge":false,"link":{"mobile_web":"https://www.myrealtrip.com/campaigns/jejurent","desktop":"https://www.myrealtrip.com/campaigns/jejurent"},"position":3,"level":1},{"id":3,"code":"tour_ticket","title":"투어・티켓","lnb_required_badge":false,"link":{"mobile_web":"https://www.myrealtrip.com/experiences/","desktop":"https://www.myrealtrip.com/experiences/"},"position":7,"level":1},{"id":7,"code":"lantour","title":"랜선투어","lnb_required_badge":false,"link":{"mobile_web":"https://www.myrealtrip.com/q/%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4","desktop":"https://www.myrealtrip.com/q/%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4"},"position":8,"level":2},{"id":5,"code":"discount","title":"할인혜택","lnb_required_badge":false,"link":{"mobile_web":"https://www.myrealtrip.com/campaigns/mrtcoupon","desktop":"https://www.myrealtrip.com/campaigns/mrtcoupon"},"position":11,"level":2}],"mainVerticalItems":[{"id":1,"code":"flights","title":"항공권","position":1,"badge":"","badge_style":"","link":{"mobile_web":"https://flights.myrealtrip.com/","desktop":"https://flights.myrealtrip.com/","mobile":"mrt://flights"},"cms_icon_id":49,"cms_icon_code":"ic_flight_40x40","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/49_original_1608700445.png?1608700445","level":1},{"id":10,"code":"accommodations","title":"숙소","position":2,"badge":"","badge_style":"","link":{"mobile_web":"https://www.myrealtrip.com/campaigns/accommodation_main","desktop":"https://www.myrealtrip.com/campaigns/accommodation_main","mobile":"mrt://web?url=https%3a%2f%2fwww.myrealtrip.com%2finstants%2fcampaigns%2faccommodation_main"},"cms_icon_id":50,"cms_icon_code":"ic_bnb_40x40","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/50_original_1608701561.png?1608701561","level":1},{"id":11,"code":"transportation","title":"렌터카・교통","position":3,"badge":"","badge_style":"","link":{"mobile_web":"https://www.myrealtrip.com/campaigns/jejurent","desktop":"https://www.myrealtrip.com/campaigns/jejurent","mobile":"mrt://web?url=https%3a%2f%2fwww.myrealtrip.com%2finstants%2fcampaigns%2fjejurent"},"cms_icon_id":52,"cms_icon_code":"ic_rentacar_40x40","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/52_original_1608701643.png?1608701643","level":1},{"id":3,"code":"tour_ticket","title":"투어・티켓","position":7,"badge":"","badge_style":"","link":{"mobile_web":"https://www.myrealtrip.com/experiences/","desktop":"https://www.myrealtrip.com/experiences/","mobile":"mrt://experiences"},"cms_icon_id":18,"cms_icon_code":"ic_tour_sm","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/18_original_1592284955.png?1592284955","level":1},{"id":7,"code":"lantour","title":"랜선투어","position":8,"badge":"","badge_style":"solid","link":{"mobile_web":"https://www.myrealtrip.com/q/%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4","desktop":"https://www.myrealtrip.com/q/%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4","mobile":"mrt://search?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4"},"cms_icon_id":53,"cms_icon_code":"ic_lantour_40x40","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/53_original_1608701669.png?1608701669","level":2},{"id":5,"code":"discount","title":"할인혜택","position":11,"badge":"","badge_style":"","link":{"mobile_web":"https://www.myrealtrip.com/campaigns/mrtcoupon","desktop":"https://www.myrealtrip.com/campaigns/mrtcoupon","mobile":"mrt://web?url=https%3a%2f%2fwww.myrealtrip.com%2finstants%2fcampaigns%2fmrtcoupon"},"cms_icon_id":24,"cms_icon_code":"ic_promotion_sm","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/24_original_1592285048.png?1592285048","level":2}],"subVerticalItems":[{"id":7,"code":"lantour","title":"랜선투어","position":8,"badge":"","badge_style":"solid","link":{"mobile_web":"https://www.myrealtrip.com/q/%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4","desktop":"https://www.myrealtrip.com/q/%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4","mobile":"mrt://search?q=%EB%9E%9C%EC%84%A0%ED%88%AC%EC%96%B4"},"cms_icon_id":53,"cms_icon_code":"ic_lantour_40x40","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/53_original_1608701669.png?1608701669","level":2},{"id":5,"code":"discount","title":"할인혜택","position":11,"badge":"","badge_style":"","link":{"mobile_web":"https://www.myrealtrip.com/campaigns/mrtcoupon","desktop":"https://www.myrealtrip.com/campaigns/mrtcoupon","mobile":"mrt://web?url=https%3a%2f%2fwww.myrealtrip.com%2finstants%2fcampaigns%2fmrtcoupon"},"cms_icon_id":24,"cms_icon_code":"ic_promotion_sm","cms_icon_url":"https://d2ur7st6jjikze.cloudfront.net/cms_icons/24_original_1592285048.png?1592285048","level":2}],"transparent":false,"isRoma":false,"popularCities":[{"rank_name":"basis_rank","pure_rank":1,"city_id":50,"location_name":"제주도","city_key_name":"Jeju","country_key_name":"Korea, Republic of","total_count":189,"confirm_count":169,"cancel_count":20,"reference_rank":1,"weighted_rank":0.00558659217877095,"ranking":1},{"rank_name":"basis_rank","pure_rank":2,"city_id":18,"location_name":"서울","city_key_name":"Seoul","country_key_name":"Korea, Republic of","total_count":31,"confirm_count":30,"cancel_count":1,"reference_rank":2,"weighted_rank":0.06557377049180328,"ranking":2},{"rank_name":"basis_rank","pure_rank":4,"city_id":99,"location_name":"강원도","city_key_name":"Gangwondo","country_key_name":"Korea, Republic of","total_count":11,"confirm_count":11,"cancel_count":0,"reference_rank":5,"weighted_rank":0.18181818181818182,"ranking":3},{"rank_name":"basis_rank","pure_rank":3,"city_id":566,"location_name":"경기도","city_key_name":"gyeonggi-do","country_key_name":"Korea, Republic of","total_count":14,"confirm_count":13,"cancel_count":1,"reference_rank":3,"weighted_rank":0.2222222222222222,"ranking":4},{"rank_name":"basis_rank","pure_rank":5,"city_id":287,"location_name":"전라도","city_key_name":"Jeolla-do","country_key_name":"Korea, Republic of","total_count":11,"confirm_count":8,"cancel_count":3,"reference_rank":4,"weighted_rank":0.5263157894736842,"ranking":5},{"rank_name":"basis_rank","pure_rank":8,"city_id":500,"location_name":"고양","city_key_name":"Goyang","country_key_name":"Korea, Republic of","total_count":6,"confirm_count":6,"cancel_count":0,"reference_rank":9,"weighted_rank":0.6666666666666666,"ranking":6},{"rank_name":"basis_rank","pure_rank":6,"city_id":445,"location_name":"여수","city_key_name":"Yeosu","country_key_name":"Korea, Republic of","total_count":9,"confirm_count":8,"cancel_count":1,"reference_rank":6,"weighted_rank":0.7058823529411764,"ranking":7},{"rank_name":"basis_rank","pure_rank":7,"city_id":212,"location_name":"경주","city_key_name":"Gyeongju","country_key_name":"Korea, Republic of","total_count":7,"confirm_count":7,"cancel_count":0,"reference_rank":7,"weighted_rank":1.0,"ranking":8},{"rank_name":"basis_rank","pure_rank":9,"city_id":132,"location_name":"대구","city_key_name":"Daegu","country_key_name":"Korea, Republic of","total_count":6,"confirm_count":6,"cancel_count":0,"reference_rank":8,"weighted_rank":1.5,"ranking":9},{"rank_name":"basis_rank","pure_rank":12,"city_id":21,"location_name":"부산","city_key_name":"Busan","country_key_name":"Korea, Republic of","total_count":4,"confirm_count":4,"cancel_count":0,"reference_rank":13,"weighted_rank":1.5,"ranking":10},{"rank_name":"basis_rank","pure_rank":13,"city_id":288,"location_name":"충청도","city_key_name":"Chungcheong-do","country_key_name":"Korea, Republic of","total_count":3,"confirm_count":3,"cancel_count":0,"reference_rank":14,"weighted_rank":2.1666666666666665,"ranking":11},{"rank_name":"basis_rank","pure_rank":10,"city_id":111,"location_name":"수원","city_key_name":"Suwon","country_key_name":"Korea, Republic of","total_count":5,"confirm_count":4,"cancel_count":1,"reference_rank":10,"weighted_rank":2.2222222222222223,"ranking":12},{"rank_name":"basis_rank","pure_rank":11,"city_id":89,"location_name":"김포","city_key_name":"Gimpo","country_key_name":"Korea, Republic of","total_count":4,"confirm_count":4,"cancel_count":0,"reference_rank":11,"weighted_rank":2.75,"ranking":13},{"rank_name":"basis_rank","pure_rank":14,"city_id":285,"location_name":"경상도","city_key_name":"Gyeongsang-do","country_key_name":"Korea, Republic of","total_count":3,"confirm_count":3,"cancel_count":0,"reference_rank":12,"weighted_rank":4.666666666666666,"ranking":14},{"rank_name":"basis_rank","pure_rank":17,"city_id":284,"location_name":"제천","city_key_name":"Jecheon","country_key_name":"Korea, Republic of","total_count":2,"confirm_count":2,"cancel_count":0,"reference_rank":17,"weighted_rank":8.5,"ranking":15}],"b2b":{"status":false,"logo":null},"isError":false}</script>
+      
 
 <main class='traveler'>
 <div class='traveler-container clearfix'>
@@ -197,7 +194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <img alt='여행자 사진' class='img-circle' src='//d2yoing0loi5gh.cloudfront.net/assets/default/user_profile_image-414acc60b27f0a258bec14c82b70dc361fc6768da9289f924f887bec1fc33849.png' width='80'>
 </div>
 <div class='username'>
-이름불러오는 SQL
+신승민
 </div>
 <div class='text-md setting hide-on-mobile'>
 <img alt='프로필 관리' class='icon item-inline' height='11px' src='https://d2yoing0loi5gh.cloudfront.net/assets/kitty/traveler/reservation/ic_setting@2x-832c08d9d38f208502f94e8d35e78a320024fc5f61630f2eba7801845e1eda78.png' width='11px'>
@@ -206,7 +203,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div class='promotion-container box clearfix'>
 <div class='item'>
-<div class='item-header text-md'>내 포인트(이 영역 지울거임)</div>
+<div class='item-header text-md'>내 포인트</div>
 <div class='item-count text-md'>
 <a href='/traveler/points'>
 0원
@@ -215,7 +212,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 <div class='item'>
-<div class='item-header text-md'>내 쿠폰(이 영역 지울거임)</div>
+<div class='item-header text-md'>내 쿠폰</div>
 <div class='item-count text-md'>
 <a href='/traveler/coupons?status=enable'>
 1장
@@ -227,7 +224,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href='/invite_friends'>
 <div class='box invite-friends-container'>
 <img alt='intive_friends' height='24px' src='https://d2yoing0loi5gh.cloudfront.net/assets/kitty/invite_friends/ic_wishlistbox@2x-80048ea84a241b58b254fdfeb18c9cc87eb8417f43f9e0628fb0454881b25be4.png' width='24px'>
-<div class='text'><span>친구 초대하고(이 영역 지울거임)</span><span class='accent'>&nbsp;2,000포인트&nbsp;</span><span>받기!</span></div>
+<div class='text'><span>친구 초대하고</span><span class='accent'>&nbsp;2,000포인트&nbsp;</span><span>받기!</span></div>
 </div>
 </a>
 </div>
@@ -247,23 +244,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </form>
 
-<div class='text'>이름불러오는 SQL</div>
+<div class='text'>신승민</div>
 </div>
 <div class='member-wrapper'>
-<form id="account-edit-form" data-validation="true" action="/traveler/account" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="jGd1nW84IBtE3rGY7f7Tw4tPHdcuE1DMCM9JTGFeKWkVV4LR/H3IedhdwbR542JzaePQgd7BIPUsYYv4iCbluw==" />
+<form id="account-edit-form" data-validation="true" action="/traveler/account" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="lLonswPpBfIugJuhKbBCpSkC1Lxgb6GAhL4uxtFEk1BoMzY6GXgRShQNYAsldS/x4+KLVVNSaJRUwsulGaJh1w==" />
 <div class='form-group form-input-group'>
 <div class='title text-middle'>이름</div>
 <div class='input-wrapper text-middle'>
 <div class='row'>
 <div class='col-xs-12'>
-<input class='form-control text-content' name='user[username]' readonly type='text' value='이름불러오는 SQL'>
+<input class='form-control text-content' name='user[username]' readonly type='text' value='신승민'>
 </div>
 </div>
 </div>
 </div>
 <div class='form-group'>
 <div class='title text-middle'>이메일</div>
-<div class='input-wrapper text-middle'>이멜불러오는 SQL</div>
+<div class='input-wrapper text-middle'>id177@naver.com</div>
 <input type='hidden' value='id177@naver.com'>
 <a class="text-link text-link-margin hide-on-editable" data-gtm-category="프로필" data-gtm-action="인증하기" data-turbolinks="false" href="/users/verifications/email?previous=account&amp;type=email_new">인증하기</a>
 <a class="show-on-editable text-link text-link-margin" data-gtm-category="프로필" data-gtm-action="인증하기" data-turbolinks="false" href="/users/verifications/email?previous=account&amp;type=email_new">인증하기</a>
@@ -272,7 +269,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class='title text-middle'>연락처</div>
 <div class='input-wrapper text-middle'>
 +82
-연락처불러오는 SQL
+01020111338
 </div>
 <div class='label-verified hide-on-editable'>
 인증완료
@@ -280,11 +277,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a class="show-on-editable text-link text-link-margin" data-gtm-category="프로필" data-gtm-action="연락처 변경하기" data-turbolinks="false" href="/users/verifications/phone?previous=account&amp;type=phone_change">연락처 변경하기</a>
 </div>
 <div class='form-group form-subscription-group'>
-<div class='title text-middle'>SNS 연동(지울거임)</div>
+<div class='title text-middle'>SNS 연동</div>
 <div class='input-wrapper text-middle input-wrapper--block'>
 <script type="application/json" id="js-react-on-rails-context">{"railsEnv":"production","inMailer":false,"i18nLocale":"ko","i18nDefaultLocale":"ko","rorVersion":"11.0.9","rorPro":false,"href":"https://www.myrealtrip.com/traveler/account","location":"/traveler/account","scheme":"https","host":"www.myrealtrip.com","port":null,"pathname":"/traveler/account","search":null,"httpAcceptLanguage":"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7","serverSide":false}</script>
-<div id="OAuthConnector-react-component-e7fffbb6-ce3e-41cd-a874-777b5cc26591"></div>
-      <script type="application/json" class="js-react-on-rails-component" data-component-name="OAuthConnector" data-dom-id="OAuthConnector-react-component-e7fffbb6-ce3e-41cd-a874-777b5cc26591">{"naver":true,"facebook":false,"kakao":false}</script>
+<div id="OAuthConnector-react-component-20754f39-1058-4ecb-ad3d-2ee29415245a"></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="OAuthConnector" data-dom-id="OAuthConnector-react-component-20754f39-1058-4ecb-ad3d-2ee29415245a">{"naver":true,"facebook":false,"kakao":false}</script>
       
 
 </div>
@@ -341,7 +338,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 </div>
-<div class='recent-edit-text show-on-editable'>최근 수정일: 최근수정일 YYYY-MM-HH로 불러오는 SQL</div>
+<div class='recent-edit-text show-on-editable'>최근 수정일: 2021-02-08</div>
 </div>
 </div>
 
@@ -361,8 +358,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 </main>
-<div id="RefundOnProfile-react-component-2a8d2673-909b-4d5b-9663-1875e00e7a53"></div>
-      <script type="application/json" class="js-react-on-rails-component" data-component-name="RefundOnProfile" data-dom-id="RefundOnProfile-react-component-2a8d2673-909b-4d5b-9663-1875e00e7a53">{"account":null}</script>
+<div id="RefundOnProfile-react-component-8f210af8-57cc-49c9-8bfe-d19e04e42740"></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="RefundOnProfile" data-dom-id="RefundOnProfile-react-component-8f210af8-57cc-49c9-8bfe-d19e04e42740">{"account":null}</script>
       
 
 <div id='account-remove'>
@@ -372,7 +369,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class='popup-window' id='popup-account-delete'>
 <div class='dark-cover'></div>
 <div class='popup-content'>
-<form id="account-delete-form" data-validation="true" action="/traveler/account" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="delete" /><input type="hidden" name="authenticity_token" value="ccTvbGG89YNMrPOJanC/ue0Pdyfdb4ldOnU2+D8L/GDo9Bgg8vkd4dAvg6X+bQ4JD6O6cS29+WQe2/RM1nMwsg==" />
+<form id="account-delete-form" data-validation="true" action="/traveler/account" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="delete" /><input type="hidden" name="authenticity_token" value="1Nzsr8KD2MraNtySVPn+ZlKAuIQwSuJptwNuAEAVTsQoVf0m2BLMcuC7JzhYPJMymGDnbQN3K31nf4tjiPO8Qw==" />
 <div class='content-container'>
 <div class='btn-close'><img class="icon" src="https://d2yoing0loi5gh.cloudfront.net/assets/roma/btn/close-6860fb9771965ed4cb40314df6f6e1d0aa54c7a8794da98f6e5c97b45983793d.png" alt="Close" /></div>
 <div class='popup-header'>
@@ -448,8 +445,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 
-<div class="mrt-default-components" id="Footer-react-component-63a263be-3a88-4840-a622-c672fe00fe2f"></div>
-      <script type="application/json" class="js-react-on-rails-component" data-component-name="Footer" data-dom-id="Footer-react-component-63a263be-3a88-4840-a622-c672fe00fe2f">{"b2b":{"status":false,"b2bCompany":null},"user":{"username":"신승민","id":3568744,"email":"id177@naver.com","phoneNumber":"+82 01020111338"}}</script>
+<div class="mrt-default-components" id="Footer-react-component-b514ffc9-70d0-4e75-9372-2e1cc1d1c85a"></div>
+      <script type="application/json" class="js-react-on-rails-component" data-component-name="Footer" data-dom-id="Footer-react-component-b514ffc9-70d0-4e75-9372-2e1cc1d1c85a">{"b2b":{"status":false,"b2bCompany":null},"user":{"username":"신승민","id":3568744,"email":"id177@naver.com","phoneNumber":"+82 01020111338"}}</script>
       
 
 <div id='popup-mask'></div>
@@ -636,7 +633,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1650301975237886&ev=PageView&noscript=1"/>
 </noscript>
 
-<form id="fourteen_agree_form" action="/traveler/confirm_fourteen_older" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ABddu+VDl/wmoPpgAnGaJNg05BEtGfV995r4cw+5ujuZJ6r3dgZ/nrojikyWbCuUOpgpR93LhUTTNDrH5sF26Q==" />
+<form id="fourteen_agree_form" action="/traveler/confirm_fourteen_older" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="K9WD+QkVZKHEl+qF9qVpMBFwkFuGAVu1n09ZwJvTJLnXXJJwE4RwGf4aES/6YARk25DPsrU8kqFPM7yjUzXWPg==" />
 </form>
 
 </body>

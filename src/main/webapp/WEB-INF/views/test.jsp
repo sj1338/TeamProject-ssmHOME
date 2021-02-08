@@ -5,13 +5,13 @@
 
 <html>
 <head>
-	<title>Home</title>
-</head>
 <meta charset="UTF-8">
  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link rel="stylesheet" href="${root }/resources/assets/css/reset.css">
 <link rel="stylesheet" href="${root }/resources/assets/css/style.css">
 <link rel="stylesheet" href="${root }/resources/assets/css/common.css">
+	<title>Home</title>
+</head>
 <body>
 <u:navbar/>
 
