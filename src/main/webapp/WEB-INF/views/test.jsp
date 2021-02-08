@@ -10,10 +10,13 @@
 <link rel="stylesheet" href="${root }/resources/assets/css/reset.css">
 <link rel="stylesheet" href="${root }/resources/assets/css/style.css">
 <link rel="stylesheet" href="${root }/resources/assets/css/common.css">
+
 	<title>Home</title>
 </head>
 <body>
 <u:navbar/>
+
+
 
 <u:footer/>
 <script>
