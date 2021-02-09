@@ -19,9 +19,6 @@ public class MyPageController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(MyPageController.class);
 	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
 	@RequestMapping(value = "/myPage", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		
@@ -34,5 +31,7 @@ public class MyPageController {
 		
 		return "myPage";
 	}
+	
+	
 	
 }

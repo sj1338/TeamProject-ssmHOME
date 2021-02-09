@@ -19,9 +19,6 @@ public class EventController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(EventController.class);
 	
-	/**
-	 * Simply selects the home view to render by returning its name.
-	 */
 	@RequestMapping(value = "/event", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		
@@ -34,5 +31,7 @@ public class EventController {
 		
 		return "event";
 	}
+	
+	
 	
 }
