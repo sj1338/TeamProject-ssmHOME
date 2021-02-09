@@ -15,14 +15,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application home page.
  */
 @Controller
-public class MyPageController {
+public class EventController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(MyPageController.class);
+	private static final Logger logger = LoggerFactory.getLogger(EventController.class);
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/myPage", method = RequestMethod.GET)
+	@RequestMapping(value = "/event", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		
 		Date date = new Date();
@@ -32,7 +32,7 @@ public class MyPageController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "myPage";
+		return "event";
 	}
 	
 }
