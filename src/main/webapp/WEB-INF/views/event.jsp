@@ -5,39 +5,40 @@
 
 <html>
 <head>
-	<title>Home</title>
+	<title>이벤트 페이지</title>
 </head>
 <script>
 $(document).ready(function() {
 	$("#upsideBtn1").click(function() {
-		$.ajax({
-			method: "POST",
-			url: "/controller/replies/new",
-			data: '{"bno":241,"reply":"new reply","replyer":"user00"}',
+		$.ajax({ 
+			method: "POST", 
+			url: "/coupon/new",
+			data: '{"memberId":'${authUser.memberId}',"couponName":"전국 할인쿠폰 7000원"}',
+			contentType: "application/json"  
 		});
 	});
 	
 	$("#upsideBtn2").click(function() {
 		$.ajax({
 			method: "POST",
-			url: "/controller/replies/new",
-			data: '{"bno":241,"reply":"new reply","replyer":"user00"}',
+			url: "/coupon/new",
+			data: '{"memberId":'${authUser.memberId}',"couponName":"전국 할인쿠폰 14000원"}'
 		});
 	});
-	
+	 
 	$("#downsideBtn1").click(function() {
 		$.ajax({
 			method: "POST",
-			url: "/controller/replies/new",
-			data: '{"bno":241,"reply":"new reply","replyer":"user00"}',
+			url: "/coupon/new",
+			data: '{"memberId":'${authUser.memberId}',"couponName":"제주도 할인쿠폰 5000원"}'
 		});
 	});
 	
 	$("#downsideBtn2").click(function() {
 		$.ajax({
 			method: "POST",
-			url: "/controller/replies/new",
-			data: '{"bno":241,"reply":"new reply","replyer":"user00"}',
+			url: "/coupon/new",
+			data: '{"memberId":'${authUser.memberId}',"couponName":"제주도 할인쿠폰 10000원"}'
 		});
 	});
 });

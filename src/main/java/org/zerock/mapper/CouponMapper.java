@@ -1,5 +1,7 @@
 package org.zerock.mapper;
 
-public interface CouponMapper {
+import org.zerock.domain.CouponVO;
 
+public interface CouponMapper {
+	public int insert(CouponVO vo);
 }

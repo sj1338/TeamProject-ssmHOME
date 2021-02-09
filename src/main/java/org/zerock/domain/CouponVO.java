@@ -1,5 +1,10 @@
 package org.zerock.domain;
 
-public class CouponVO {
+import lombok.Data;
 
+@Data
+public class CouponVO {
+	private Long couponNo;
+	private String memberId;
+	private String couponName;
 }
