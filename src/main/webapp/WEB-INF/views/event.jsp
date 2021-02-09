@@ -23,20 +23,32 @@
 }
 
 .event-container img {
-  width: 80%;
+  width: 60%;
   height: auto;
 }
 
 .event-container #upsideBtn1 {
   position: absolute;
   top: 23%;
-  left: 25%;
+  left: 28%;
 }
 
 .event-container #upsideBtn2 {
   position: absolute;
   top: 23%;
-  left: 75%;
+  right: 28%;
+}
+
+.event-container #downsideBtn1 {
+  position: absolute;
+  top: 66%;
+  left: 28%;
+}
+
+.event-container #downsideBtn2 {
+  position: absolute;
+  top: 66%;
+  right: 28%;
 }
 
 /* .event-container .btn:hover {
@@ -53,8 +65,8 @@
   <!-- <button class="btn">Button</button> -->
   <input type="image" id="upsideBtn1" src="/resources/event/upsideBtn1.png" />
   <input type="image" id="upsideBtn2" src="/resources/event/upsideBtn2.png" />
-  <input type="image" id="downsideBtn1" src="/resources/event/downsideBtn3.png" />
-  <input type="image" id="downsideBtn2" src="/resources/event/downsideBtn4.png" />
+  <input type="image" id="downsideBtn1" src="/resources/event/downsideBtn1.png" />
+  <input type="image" id="downsideBtn2" src="/resources/event/downsideBtn2.png" />
 </div>
 
 
