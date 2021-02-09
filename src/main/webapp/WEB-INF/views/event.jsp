@@ -7,6 +7,41 @@
 <head>
 	<title>Home</title>
 </head>
+<script>
+$(document).ready(function() {
+	$("#upsideBtn1").click(function() {
+		$.ajax({
+			method: "POST",
+			url: "/controller/replies/new",
+			data: '{"bno":241,"reply":"new reply","replyer":"user00"}',
+		});
+	});
+	
+	$("#upsideBtn2").click(function() {
+		$.ajax({
+			method: "POST",
+			url: "/controller/replies/new",
+			data: '{"bno":241,"reply":"new reply","replyer":"user00"}',
+		});
+	});
+	
+	$("#downsideBtn1").click(function() {
+		$.ajax({
+			method: "POST",
+			url: "/controller/replies/new",
+			data: '{"bno":241,"reply":"new reply","replyer":"user00"}',
+		});
+	});
+	
+	$("#downsideBtn2").click(function() {
+		$.ajax({
+			method: "POST",
+			url: "/controller/replies/new",
+			data: '{"bno":241,"reply":"new reply","replyer":"user00"}',
+		});
+	});
+});
+</script>
 <meta charset="UTF-8">
  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link rel="stylesheet" href="${root }/resources/assets/css/reset.css">

@@ -20,17 +20,12 @@ public class EventController {
 	private static final Logger logger = LoggerFactory.getLogger(EventController.class);
 	
 	@RequestMapping(value = "/event", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
+	public String event(Locale locale, Model model) {
 		
 		return "event";
 	}
+	
+	
 	
 	
 	
