@@ -19,7 +19,10 @@ public class CouponServiceImpl implements CouponService {
 	public int register(CouponVO vo) {
 		return couponMapper.insert(vo);
 	}
-		
-		
+
+	@Override
+	public int duplicateCheck(CouponVO vo) {
+		return couponMapper.check(vo);
 	}
+}
 

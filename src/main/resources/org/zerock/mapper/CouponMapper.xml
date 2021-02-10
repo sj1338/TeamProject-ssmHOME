@@ -5,7 +5,12 @@
 
 <mapper namespace="org.zerock.mapper.CouponMapper">
 	<insert id="insert">
-		INSERT INTO coupon (couponId, memberId, couponName)
+		INSERT INTO coupon (couponNo, memberId, couponName)
 		VALUES (seq_coupon.nextval, #{memberId}, #{couponName})
 	</insert>
+	
+	<select id="check">
+		SELECT couponNo FROM coupon WHERE memberId = #{memberId} and couponName LIKE #{couponName}
+	</select>
 </mapper>
+
