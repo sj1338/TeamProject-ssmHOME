@@ -35,11 +35,11 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/admin/Documents/sts-bundle/sts-3.9.13.RELEASE/lombok.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Documents/jdbclib/ojdbc8.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Documents/jdbclib/oraclepki.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Documents/jdbclib/osdt_cert.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Documents/jdbclib/osdt_core.jar"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Documents/jdbclib/ucp.jar"/>
+	<classpathentry kind="lib" path="C:/home/spring-workspace/TeamProject-ssm/src/main/webapp/WEB-INF/lib/ojdbc8.jar"/>
+	<classpathentry kind="lib" path="C:/home/spring-workspace/TeamProject-ssm/src/main/webapp/WEB-INF/lib/oraclepki.jar"/>
+	<classpathentry kind="lib" path="C:/home/spring-workspace/TeamProject-ssm/src/main/webapp/WEB-INF/lib/osdt_cert.jar"/>
+	<classpathentry kind="lib" path="C:/home/spring-workspace/TeamProject-ssm/src/main/webapp/WEB-INF/lib/osdt_core.jar"/>
+	<classpathentry kind="lib" path="C:/home/spring-workspace/TeamProject-ssm/src/main/webapp/WEB-INF/lib/ucp.jar"/>
+	<classpathentry kind="lib" path="C:/Users/id177/OneDrive/문서/sts-bundle/sts-3.9.13.RELEASE/lombok.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
