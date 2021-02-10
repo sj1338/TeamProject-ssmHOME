@@ -21,7 +21,7 @@ public class CouponServiceImpl implements CouponService {
 	}
 
 	@Override
-	public int duplicateCheck(CouponVO vo) {
+	public Integer duplicateCheck(CouponVO vo) {
 		return couponMapper.check(vo);
 	}
 }

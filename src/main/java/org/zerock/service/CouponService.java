@@ -6,5 +6,5 @@ public interface CouponService {
 	
 	public int register(CouponVO vo);
 	
-	public int duplicateCheck(CouponVO vo);
+	public Integer duplicateCheck(CouponVO vo);
 }

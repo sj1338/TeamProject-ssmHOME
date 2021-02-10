@@ -46,11 +46,11 @@ public class CouponController {
 
 		log.info("vo: " + vo);
 
-		int checkCount = couponService.duplicateCheck(vo);
+		Integer checkCount = couponService.duplicateCheck(vo);
 		
 		log.info("count: " + checkCount);
 		
-		if (checkCount == 0) {
+		if (checkCount == null) {
 			int insertCount = couponService.register(vo);
 			
 			log.info("count: " + insertCount);

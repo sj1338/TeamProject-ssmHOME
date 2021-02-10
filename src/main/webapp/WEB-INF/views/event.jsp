@@ -37,7 +37,7 @@ $(document).ready(function() {
 			} else if (status == "error") {
 				unloginedModal.modal('show');	
 			}
-		})
+		});
 	});
 	$("#upsideBtn2").click(function() {
 		$.ajax({
@@ -45,6 +45,15 @@ $(document).ready(function() {
 			url: "/coupon/new",
 			data: '{"memberId":"${authUser.memberId}","couponName":"전국 할인쿠폰 14000원"}',
 			contentType: "application/json"
+		}).done(function() {
+			successModal.modal('show');
+		}).fail(function(xhr, status) {
+			console.log(status);
+			if (status == "error") {
+				duplicatedModal.modal('show');
+			} else if (status == "error") {
+				unloginedModal.modal('show');	
+			}
 		});
 	});
 	 
@@ -54,6 +63,15 @@ $(document).ready(function() {
 			url: "/coupon/new",
 			data: '{"memberId":"${authUser.memberId}","couponName":"제주도 할인쿠폰 5000원"}',
 			contentType: "application/json"
+		}).done(function() {
+			successModal.modal('show');
+		}).fail(function(xhr, status) {
+			console.log(status);
+			if (status == "error") {
+				duplicatedModal.modal('show');
+			} else if (status == "error") {
+				unloginedModal.modal('show');	
+			}
 		});
 	});
 	
@@ -63,6 +81,15 @@ $(document).ready(function() {
 			url: "/coupon/new",
 			data: '{"memberId":"${authUser.memberId}","couponName":"제주도 할인쿠폰 10000원"}',
 			contentType: "application/json"
+		}).done(function() {
+			successModal.modal('show');
+		}).fail(function(xhr, status) {
+			console.log(status);
+			if (status == "error") {
+				duplicatedModal.modal('show');
+			} else if (status == "error") {
+				unloginedModal.modal('show');	
+			}
 		});
 	});
 });
