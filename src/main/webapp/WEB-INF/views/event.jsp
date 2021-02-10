@@ -15,7 +15,7 @@
   src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-	<title>이벤트 페이지 home</title>
+	<title>이벤트 페이지 home1</title>
 <script>
 $(document).ready(function() {
 	var successModal = $("#success-modal");
