@@ -26,7 +26,10 @@ public class EventController {
 	}
 	
 	
-	
+	@RequestMapping(value ="/testJoin", method = RequestMethod.GET)
+	public String testJoin(Locale locale, Model model) {
+		return "/prac/joinform";
+	}
 	
 	
 }
