@@ -12,6 +12,8 @@
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<!-- <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property> 
 			<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:49161:xe"></property> -->
+			
+			
 		<property name="driverClassName"
 			value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
 		<property name="jdbcUrl"
@@ -20,6 +22,8 @@
 		<property name="username" value="admin"></property>
 		<property name="password" value="501teamprojectA"></property>
 		<property name="maximumPoolSize" value="1"></property>
+		
+		
 	</bean>
 
 	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource"
