@@ -1,12 +1,16 @@
 package org.zerock.controller;
 
+import java.util.Locale;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.zerock.domain.CouponVO;
 import org.zerock.service.CouponService;
@@ -21,6 +25,7 @@ import lombok.extern.log4j.Log4j;
 public class CouponController {
 
 	private CouponService couponService;
+	
 
 	@PostMapping(value = "/new")
 	public ResponseEntity<String> create(@RequestBody CouponVO vo, HttpSession session) {
