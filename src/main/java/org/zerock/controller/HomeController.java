@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Handles requests for the application home page.
  */
 @Controller
-public class EventController {
+public class HomeController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(EventController.class);
+	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@RequestMapping(value = "/event", method = RequestMethod.GET)
 	public String event(Locale locale, Model model) {
