@@ -25,5 +25,12 @@ public class HomeController {
 		return "event";
 	}
 	
+	@RequestMapping(value = "/myPage", method = RequestMethod.GET)
+	public String myPage(Locale locale, Model model) {
+		
+		return "myPage";
+	}
+	
+	
 	
 }

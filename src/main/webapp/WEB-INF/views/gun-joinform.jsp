@@ -17,7 +17,7 @@
 <body>
 <u:navbar/>
 <div class="signup">
-        <form action="#" method="POST">
+        <form action="/member/join" method="POST">
             <input type="hidden" name="" value="">
             <div class="signup-info">
                 <div class="sinup-module">

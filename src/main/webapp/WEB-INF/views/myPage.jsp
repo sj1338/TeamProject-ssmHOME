@@ -77,6 +77,7 @@
 						<li class="list-group-item">이름 : ${authUser.name}</li>
 						<li class="list-group-item">비밀번호 : ${authUser.password}</li>
 						<li class="list-group-item">가입 날짜 : ${authUser.regdate}</li>
+						
 					</ul>
 					<div class=text-center>
 						<a href="${root}/changePwd.do" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">비밀번호 변경</a>
