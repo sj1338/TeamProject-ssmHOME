@@ -26,7 +26,7 @@ $(document).ready(function() {
 		$.ajax({ 
 			method: "POST", 
 			url: "/coupon/new",
-			data: '{"memberId": "1","couponName":"전국 할인쿠폰 7000원"}',
+			data: '{"memberId": "${authUser.memberId}","couponName":"전국 할인쿠폰 7000원"}',
 			contentType: "application/json"
 		}).done(function() {
 			successModal.modal('show');
