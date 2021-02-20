@@ -16,7 +16,7 @@
 <title>my fake trip</title>
 </head>
 <body>
-<u:navbar/>
+<m:navbar/>
 <form action="${root }/member/login" method="POST">
         <div class="loginform">
             <div class="loginform-text">
@@ -31,7 +31,7 @@
                     </div>
                     <div class="sinup-module">
                         <label for="Password" class="sinup-text">
-                            <p>비밀번호 *</p>
+                           <p>비밀번호 *</p>
                             <div>
                                 <input type="password" class="TextField-module__input--kfks8 TextField-module__medium--2zybh" id="Password" name="inputPw" placeholder="비밀번호를 입력해주세요" value="">
                             </div>
@@ -55,6 +55,6 @@
             </div>
     </div>
 </form>
-<u:navbar/>
+<m:footer/>
 </body>
 </html>

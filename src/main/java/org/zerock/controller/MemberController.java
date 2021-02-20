@@ -28,6 +28,11 @@ public class MemberController {
 
 	private MemberService service;
 
+	@GetMapping("/myPage")
+	public void myPage() {	
+	}
+	
+	
 	@GetMapping("/home")
 	public void home() {
 	}

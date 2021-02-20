@@ -16,7 +16,7 @@
 <title>my fake trip</title>
 </head>
 <body>
-<u:navbar/>
+<m:navbar/>
 <div class="signup">
         <form action="/member/join" method="post">
             <input type="hidden" name="" value="">
@@ -83,6 +83,6 @@
             </div>
         </form>
     </div>
-    <u:footer/>
+    <m:footer/>
 </body>
 </html>

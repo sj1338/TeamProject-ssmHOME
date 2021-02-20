@@ -23,5 +23,7 @@ public interface MemberService {
 	public boolean checkMember(String memA, String memB);
 
 	MemberVO getMemberId(String id);
+
+	
 	
 }
