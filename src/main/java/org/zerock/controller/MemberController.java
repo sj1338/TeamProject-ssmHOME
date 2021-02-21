@@ -143,7 +143,6 @@ public class MemberController {
 		}
 	}
 	
-/*	
 	// ##내 정보 보기
 	@GetMapping("/myHome")
 	public String myHome() {
@@ -226,6 +225,6 @@ public class MemberController {
 			return new ResponseEntity<> (HttpStatus.INTERNAL_SERVER_ERROR);		
 		}
 	}
-*/
+
 	
 }

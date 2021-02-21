@@ -87,7 +87,7 @@
 											<div class="row">
 												<div class="col-xs-12">
 													<input type="text" class="form-control text-content"
-														value="유저 닉네임" readonly name="account-input" id="nickname">
+														value="${authUser.nickname}" readonly name="account-input" id="nickname" style="height:30px">
 												</div>
 											</div>
 										</div>
@@ -98,8 +98,44 @@
 											<div class="row">
 												<div class="col-xs-12">
 													<input type="text" class="form-control text-content"
-														value="***********" readonly name="account-input"
-														id="password">
+														value="${authUser.password}" readonly name="account-input"
+														id="password" style="height:30px">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group form-input-group">
+										<div class="title text-middle">성명</div>
+										<div class="input-wrapper text-middle">
+											<div class="row">
+												<div class="col-xs-12">
+													<input type="text" class="form-control text-content"
+														value="${authUser.name}" readonly name="account-input"
+														id="name" style="height:30px">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group form-input-group">
+										<div class="title text-middle">전화번호</div>
+										<div class="input-wrapper text-middle">
+											<div class="row">
+												<div class="col-xs-12">
+													<input type="text" class="form-control text-content"
+														value="${authUser.phone}" readonly name="account-input"
+														id="phone" style="height:30px">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group form-input-group">
+										<div class="title text-middle">이메일</div>
+										<div class="input-wrapper text-middle">
+											<div class="row">
+												<div class="col-xs-12">
+													<input type="text" class="form-control text-content"
+														value="${authUser.email}" readonly name="account-input"
+														id="email" style="height:30px">
 												</div>
 											</div>
 										</div>
@@ -121,6 +157,20 @@
 										</div>
 									</div>
 								</form>
+								<div class="form-group form-input-group">
+										<div class="title text-middle" id="coupon">나의 쿠폰</div>
+										<div class="input-wrapper text-middle">
+											<div class="row">
+												<div class="col-xs-12">
+													<input type="text" class="form-control text-content"
+														value="
+														
+														" readonly name="account-inputX"
+														id="email" style="height:30px">
+												</div>
+											</div>
+										</div>
+									</div>
 							</div>
 						</div>
 					</div>
@@ -155,11 +205,11 @@
 			</div>
 		</div>
 	</div>
-
 	<script>
 		var isModify = false;
 		var $accountModify = $('#account-modify');
 		var $accountInput = $('[name=account-input]');
+		var $couponHidden = $('#coupon');
 		var $buttonGroup = $('#button-group');
 		var $remove = $('#remove');
 		$accountModify.off().on('click', function(event) {
@@ -167,12 +217,14 @@
 				// 수정취소.
 				isModify = false;
 				$accountInput.attr('readonly', 'readonly');
-				$buttonGroup.addClass('d-none')
+				$buttonGroup.addClass('d-none');
+				$couponHidden.removeAttr('hidden')
 			} else {
 				//인풋 수정
 				isModify = true;
 				$accountInput.removeAttr('readonly');
 				$buttonGroup.removeClass('d-none');
+				$couponHidden.attr('hidden', 'hidden')
 			}
 			console.log(isModify)
 		})

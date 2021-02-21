@@ -1,5 +1,6 @@
 <%@ tag language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="u" tagdir="/WEB-INF/tags" %>
 
 <div class="header">
     <header class="header-container white">
@@ -23,16 +24,22 @@
                 </div>
                 <!-- search -->
                 <!-- menu -->
+                
                 <div class="header-menu white">
+                <u:isLogin>
                     <div class="header-menu-item">
-                        <a class="d-line-block" href="#" data-turbolinks="false">마이페이지</a>
+                        <a class="d-line-block" href="/member/myPage" data-turbolinks="false">마이페이지</a>
                     </div>
+                 </u:isLogin>
+                    
+                    <u:notLogin>
                     <div class="header-menu-item">
                         <a class="d-line-block" href="#" data-turbolinks="false">회원가입</a>
                     </div>
                     <div class="header-menu-item">
-                        <a class="d-line-block link-btn" href="#">로그인</a>
+                        <a class="d-line-block link-btn" href="/member/login">로그인</a>
                     </div>
+                    </u:notLogin>
                 </div>
                 <!-- menu -->
             </nav>
