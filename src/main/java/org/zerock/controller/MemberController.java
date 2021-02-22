@@ -177,7 +177,7 @@ public class MemberController {
 			session.setAttribute("authUser", member);
 			//수정된 멤버 정보를 세션에 저장
 			
-			return "/member/myHome";
+			return "/member/myPage";
 		
 		}
 	

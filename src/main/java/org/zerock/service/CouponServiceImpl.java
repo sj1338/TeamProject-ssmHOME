@@ -1,5 +1,7 @@
 package org.zerock.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zerock.domain.CouponVO;
@@ -23,6 +25,11 @@ public class CouponServiceImpl implements CouponService {
 	@Override
 	public Integer duplicateCheck(CouponVO vo) {
 		return couponMapper.check(vo);
+	}
+	
+	@Override
+	public List<CouponVO> myCouponList(CouponVO vo) {
+		return couponMapper.getList();
 	}
 }
 

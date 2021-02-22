@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="u" tagdir="/WEB-INF/tags"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,36 +30,6 @@
 	<!--main-->
 	<main class="traveler">
 		<div class="traveler-container clearfix">
-			<!-- <div class="sidebar-heading">프로필 관리</div>
-			<div class="traveler-sidebar">
-				<div class="sidebar-wrapper">
-					<div class="profile-container box">
-						<div class="profile">
-							<img class="img-circle"
-								src="//d2yoing0loi5gh.cloudfront.net/assets/default/user_profile_image-414acc60b27f0a258bec14c82b70dc361fc6768da9289f924f887bec1fc33849.png"
-								alt=" 여행자 사진" width="80">
-						</div>
-						<div class="username">유저 닉네임</div>
-						<div class="text-md setting hide-on-mobile">
-							<img
-								src="https://d2yoing0loi5gh.cloudfront.net/assets/kitty/traveler/reservation/ic_setting@2x-832c08d9d38f208502f94e8d35e78a320024fc5f61630f2eba7801845e1eda78.png"
-								alt="프로필관리" class="icon item-inline" height="11px;"> <a
-								href="#" style="color: #343A40">프로필관리</a>
-						</div>
-					</div>
-					<div class="promotion-container box clearfix">
-						<div class="item">
-							<div class="item-header text-md">내쿠폰</div>
-							<div class="item-count text-md">
-								<a href="#"> 0장 <img
-									src="https://d2yoing0loi5gh.cloudfront.net/assets/kitty/setting/ic-arrow-right-xs@2x-b290f6804f2f002ced664adc4c5e63a59629269d2e6657184239261195f22147.png"
-									alt="arrow" class="arrow" width="16px">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> -->
 			<div class="traveler-body">
 				<main class="member-box box mode-readonly clearfix" id="member">
 					<div class="member-container width-edit-btn">
@@ -72,7 +43,7 @@
 								<div class="text">유저 닉네임</div>
 							</div>
 							<div class="member-wrapper">
-								<form action="#" class="fv-form fv-form-bootstrap"
+								<form action="/member/modify" class="fv-form fv-form-bootstrap"
 									data-validation="true" accept-charset="UTF-8" method="POST"
 									novalidate="novalidate">
 									<button class="fv-hidden-submit"
@@ -157,20 +128,32 @@
 										</div>
 									</div>
 								</form>
+								<div id="modify-hidden">
 								<div class="form-group form-input-group">
-										<div class="title text-middle" id="coupon">나의 쿠폰</div>
+										<div class="title text-middle">나의 쿠폰</div>
 										<div class="input-wrapper text-middle">
 											<div class="row">
 												<div class="col-xs-12">
-													<input type="text" class="form-control text-content"
-														value="
-														
-														" readonly name="account-inputX"
-														id="email" style="height:30px">
+													<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+													쿠폰 확인
+													</button>
 												</div>
 											</div>
 										</div>
 									</div>
+									<div class="form-group form-input-group">
+										<div class="title text-middle">가입일</div>
+										<div class="input-wrapper text-middle">
+											<div class="row">
+												<div class="col-xs-12">
+													<!-- <input type="text" class="form-control text-content" -->
+														<fmt:formatDate pattern="yyyy-MM-dd" value="${authUser.regDate}"/>
+														<!-- readonly name="account-inputX" id="regDate" style="height:30px"> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -205,11 +188,30 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">내가 보유한 쿠폰</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       	5천원
+       	1만원
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 	<script>
 		var isModify = false;
 		var $accountModify = $('#account-modify');
 		var $accountInput = $('[name=account-input]');
-		var $couponHidden = $('#coupon');
+		var $modifyHidden = $('#modify-hidden');
 		var $buttonGroup = $('#button-group');
 		var $remove = $('#remove');
 		$accountModify.off().on('click', function(event) {
@@ -218,13 +220,13 @@
 				isModify = false;
 				$accountInput.attr('readonly', 'readonly');
 				$buttonGroup.addClass('d-none');
-				$couponHidden.removeAttr('hidden')
+				$modifyHidden.removeAttr('hidden');
 			} else {
 				//인풋 수정
 				isModify = true;
 				$accountInput.removeAttr('readonly');
 				$buttonGroup.removeClass('d-none');
-				$couponHidden.attr('hidden', 'hidden')
+				$modifyHidden.attr('hidden', 'hidden')				
 			}
 			console.log(isModify)
 		})

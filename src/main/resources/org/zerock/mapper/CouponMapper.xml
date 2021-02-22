@@ -12,5 +12,9 @@
 	<select id="check" resultType="org.zerock.domain.CouponVO">
 		SELECT couponNo FROM coupon WHERE memberId = #{memberId} and couponName LIKE #{couponName}
 	</select>
+	
+	<select id="getList">
+		SELECT couponName WHERE memberId = #{memberId}
+	</select>
 </mapper>
 

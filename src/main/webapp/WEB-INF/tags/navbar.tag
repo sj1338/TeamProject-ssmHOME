@@ -61,7 +61,7 @@
                         </a>
                     </div>
                     <div class="navigation-item">
-                        <a href="#">
+                        <a href="/coupon">
                             <img src="https://d2ur7st6jjikze.cloudfront.net/cms_icons/18_original_1592284955.png?1592284955" alt="ic_tour_sm">
                             <span>이벤트</span>
                         </a>
