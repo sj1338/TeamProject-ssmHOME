@@ -198,8 +198,9 @@
         </button>
       </div>
       <div class="modal-body">
-       	5천원
-       	1만원
+       	<c:forEach var="coupon" items="${items}">
+			
+		</c:forEach>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
