@@ -30,13 +30,11 @@
 	
 <update id="update">
 	update Member
-	set id= #{id},
-	password= #{password},	
+	set password= #{password},	
 	name= #{name},
 	nickname= #{nickname},
 	phone= #{phone},
 	email= #{email},
-	regdate= sysdate + 9/24
 	where id = #{id}	
 </update>
 	

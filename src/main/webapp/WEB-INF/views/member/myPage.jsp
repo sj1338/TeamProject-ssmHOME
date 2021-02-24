@@ -24,6 +24,23 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <title>정보수정</title>
+<script>
+$(document).ready(function() {
+		$("#deleteSubmit").click(function() {
+			var userId = "${authUser.id}";
+			
+			$.ajax("/member/delete?" + $.param({userId: userId}), {
+				method: "delete" 
+			}).fail(function() {
+				window.location = "home";
+				console.log("삭제 실패");
+			}).done(function() {
+				window.location = "home";
+				console.log("삭제 완료");
+			});
+		});
+});
+</script>
 </head>
 <body>
 	<u:navbar />
@@ -177,17 +194,18 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<p style="font-size: 15px;">회원탈퇴 진행하시겠습니까 ?</p>
+					<p style="font-size: 15px;">정말로 탈퇴 하시겠습니까 ?</p>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-danger"
-						style="font-size: 12px;">삭제하기</button>
+						style="font-size: 12px;" id="deleteSubmit">삭제하기</button>
 					<button type="button" class="btn btn-secondary"
 						data-dismiss="modal" style="font-size: 12px;">취소</button>
 				</div>
 			</div>
 		</div>
 	</div>
+		
 	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">

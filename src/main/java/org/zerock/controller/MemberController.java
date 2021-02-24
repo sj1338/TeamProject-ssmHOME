@@ -4,10 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +30,10 @@ import lombok.extern.log4j.Log4j;
 public class MemberController {
 
 	private MemberService service;
+	
+	@GetMapping("/myPage")
+	public void myPage() {
+	}
 
 	@GetMapping("/home")
 	public void home() {
@@ -226,96 +234,75 @@ public class MemberController {
 		}
 	}
 	
-
-	
-	
-
-	
-	
-	
-/*	
-	// ##내 정보 보기
-	@GetMapping("/myHome")
-	public String myHome() {
-		return "/member/myHome";
-		
+	@GetMapping("/modify")
+	public String myModifyPage(HttpSession session, RedirectAttributes rttr) {
+		if (session.getAttribute("authUser") == null) {
+			rttr.addFlashAttribute("notFoundUser", true);
+			// 세션에 로그인 정보가 없으면
+			return "redirect:/member/login";
+		}
+		return "/member/myPage";
 	}
 	
-	// 내 정보 수정 - GET, void(경로로 바로 이동)
-	@GetMapping("/myModify")
-	public void myModifyPage() {
 	
-	}
-	
-	// ##내 정보 수정 - POST
-	@PostMapping("/myModify")
-	public String myModify(MemberVO member, HttpSession session) {
-		
-		MemberVO user = (MemberVO) session.getAttribute("authUser");
-		log.info(user);
-		log.info(service);
-		log.info(member);
-		MemberVO userMember = service.getMemberId(user.getId());
-		
-		boolean checkMember = service.checkMember(userMember.getId(), member.getId());
-		//같은 아이디인지 확인
-		
-		if(checkMember) {
-			service.modify(member); 
-			
+	@PostMapping("/modify")
+	public String myModify(MemberVO member, HttpSession session, HttpServletRequest req, RedirectAttributes rttr) {
+
+		if (session.getAttribute("authUser") != null) {
+			// 세션에 정보가 있을때만
+			Map<String, Boolean> errors = new HashMap<String, Boolean>();
+			req.setAttribute("errors", errors);
+			validate(errors, member);
+
+			MemberVO user = (MemberVO) session.getAttribute("authUser");
+			log.info(user);
+			log.info(service);
 			log.info(member);
-			
-			session.setAttribute("authUser", member);
-			//수정된 멤버 정보를 세션에 저장
-			
-			return "/member/myHome";
-		
+			MemberVO findMember = service.getMemberId(user.getId());
+			boolean checkMember = service.checkMember(findMember.getId(), member.getId());
+			// 같은 아이디인지 확인
+
+			if (errors.isEmpty()) {
+				// 새롭게 set errors
+				// 에러가 없으면 수정 진행
+				if (checkMember) {
+
+					service.modify(member);
+					log.info("수정 서비스 실행)");
+					log.info(member);
+
+					session.setAttribute("authUser", member);
+					// 수정된 멤버 정보를 세션에 저장
+
+					return "/member/myPage";
+
+				}
+			}
+		} else {
+
+			rttr.addFlashAttribute("notFoundUser", true);
+			// 세션에 로그인 정보가 없으면
+			return "redirect:/member/login";
 		}
-	
-		return "/member/myHome";
-		
+		log.info("수정 실패");
+		return "redirect:/index.jsp";
+		//혹시나 수정 실패시 홈으로 이동 
 	}
-	
-	// ##이메일 부분 나누기
-	public void emailDivide(String email) {
-		
-		String emailDiv[] = email.split("@");
-		String emailFront = null;
-		String emailSelect = null;
-		
-		if(emailDiv != null && emailDiv.length >= 2) {
-			emailFront = emailDiv[0];
-			emailSelect = emailDiv[1];
-		}
-		
-		log.info(emailFront);
-		log.info(emailSelect);
-		
-	}
-	
+
 	// ##회원 삭제
 	@DeleteMapping("/delete")
 	@ResponseBody
-	public ResponseEntity<String> delete(String userId, String pwConfirm, HttpSession session) {
+	public void delete(String userId, HttpSession session) {
+		
 		log.info(userId);
-		log.info(pwConfirm);
-		log.info("회원탈퇴 모달");
-		
-		MemberVO userMember = service.getMemberId(userId);
-		
-		if(userMember.getPassword().equals(pwConfirm)) {
+
 			service.remove(userId);
-			log.info("회원탈퇴 성공!");
+			log.info("회원탈퇴 성공");
 			
-			if(session != null) {
-				session.invalidate();
-			}
-			
-			return new ResponseEntity<> ("success", HttpStatus.OK);
-		} else {
-			return new ResponseEntity<> (HttpStatus.INTERNAL_SERVER_ERROR);		
+			if (session != null) {
+				session.invalidate();	
+
 		}
-	}
-*/
-	
+
+	} 
 }
