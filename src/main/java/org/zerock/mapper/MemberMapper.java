@@ -30,9 +30,3 @@ public interface MemberMapper {
 	
 	
 }
-
-
-
-
-
-

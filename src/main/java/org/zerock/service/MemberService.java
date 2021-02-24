@@ -1,5 +1,7 @@
 package org.zerock.service;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.zerock.domain.MemberVO;
 
 public interface MemberService {
@@ -22,7 +24,13 @@ public interface MemberService {
 	//회원 정보 체크
 	public boolean checkMember(String memA, String memB);
 
-	MemberVO getMemberId(String id);
+	public MemberVO getMemberId(String id);
+	
+	//이메일발송
+	public void sendEmail(MemberVO vo, String div) throws Exception;
+
+	//비밀번호찾기
+	public void findPw(HttpServletResponse resp, MemberVO vo) throws Exception;
 
 	
 	
