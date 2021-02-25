@@ -1,14 +1,12 @@
 package org.zerock.controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,7 +15,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.zerock.domain.CouponVO;
 import org.zerock.domain.MemberVO;
+import org.zerock.service.CouponService;
 import org.zerock.service.MemberService;
 
 import lombok.AllArgsConstructor;
@@ -30,9 +30,16 @@ import lombok.extern.log4j.Log4j;
 public class MemberController {
 
 	private MemberService service;
+	private CouponService couponService;
 	
 	@GetMapping("/myPage")
-	public void myPage() {
+	public void myPage(Model model, HttpSession session) {
+		Object o = session.getAttribute("authUser");
+		
+		if (o != null) {
+			List<CouponVO> couponList = couponService.getList(((MemberVO) o).getId());
+			model.addAttribute("list", couponList);
+		}
 	}
 
 	@GetMapping("/home")
@@ -239,18 +246,12 @@ public class MemberController {
 	public String myModify(MemberVO member, HttpSession session) {
 
 		if (session.getAttribute("authUser") != null) {
-
 			MemberVO user = (MemberVO) session.getAttribute("authUser");
 			log.info(user);
-			log.info(service);
-			log.info(member);
 
 			service.modify(member);
-			log.info("수정 서비스 실행)");
-			log.info(member);
 
 			session.setAttribute("authUser", member);
-			// 수정된 멤버 정보를 세션에 저장
 
 			return "/member/myPage";
 		}

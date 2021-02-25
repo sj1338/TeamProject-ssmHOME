@@ -64,7 +64,8 @@ $(document).ready(function() {
 									data-validation="true" accept-charset="UTF-8" method="POST"
 									novalidate="novalidate">
 									<input type="hidden" class="form-control text-content" value="${authUser.id}" readonly name="id" id="id" style="height:30px">
-														
+									<input type="hidden" class="form-control text-content" value="${authUser.email}" readonly name="email" style="height:30px">
+									<%-- <input type="date" class="form-control text-content" value="${authUser.regdate}" readonly name="regdate" style="height:30px">	 --%>
 									<button class="fv-hidden-submit"
 										style="display: none; width: 0px; height: 0px;"></button>
 									<!-- <input type="hidden" name="utf-8" value=""> <input
@@ -148,6 +149,18 @@ $(document).ready(function() {
 											</div>
 										</div>
 									</div>
+									<%-- <div class="form-group form-input-group">
+										<div class="title text-middle">가입일</div>
+										<div class="input-wrapper text-middle">
+											<div class="row">
+												<div class="col-xs-12">
+													<input type="text" class="form-control text-content" 
+														value= "<fmt:formatDate pattern="yyyy-MM-dd" value="${authUser.regdate}"/>"
+													readonly name="regdate" id="regdate" style="height:30px">
+												</div>
+											</div>
+										</div>
+									</div> --%>
 								<div class="form-group form-input-group">
 										<div class="title text-middle">나의 쿠폰</div>
 										<div class="input-wrapper text-middle">
@@ -156,18 +169,6 @@ $(document).ready(function() {
 													<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 													쿠폰 확인
 													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="form-group form-input-group">
-										<div class="title text-middle">가입일</div>
-										<div class="input-wrapper text-middle">
-											<div class="row">
-												<div class="col-xs-12">
-													<input type="text" class="form-control text-content" 
-														value= "<fmt:formatDate pattern="yyyy-MM-dd" value="${authUser.regdate}"/>"
-													readonly name="regdate" id="regdate" style="height:30px">
 												</div>
 											</div>
 										</div>
@@ -218,8 +219,8 @@ $(document).ready(function() {
         </button>
       </div>
       <div class="modal-body">
-       	<c:forEach var="coupon" items="${items}">
-			
+       	<c:forEach var="coupon" items="${list}">
+			<p><c:out value="${coupon.couponName}" /></p>
 		</c:forEach>
       </div>
       <div class="modal-footer">
