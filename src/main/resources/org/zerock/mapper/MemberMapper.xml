@@ -30,12 +30,14 @@
 	
 <update id="update">
 	update Member
-	set password= #{password},	
-	name= #{name},
-	nickname= #{nickname},
-	phone= #{phone},
-	email= #{email},
-	where id = #{id}	
+	set
+	nickname= #{nickname}
+	, password= #{password}
+	, name= #{name}
+	, phone= #{phone}
+	, email= #{email}
+	, regdate= #{regdate}
+	where id = #{id}
 </update>
 	
 	
@@ -47,8 +49,4 @@
 		   AND password = #{password}   
 	</select>	
 	
-	
-	
-
-
 </mapper>

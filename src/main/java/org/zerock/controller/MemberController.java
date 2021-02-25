@@ -234,60 +234,30 @@ public class MemberController {
 		}
 	}
 	
-	@GetMapping("/modify")
-	public String myModifyPage(HttpSession session, RedirectAttributes rttr) {
-		if (session.getAttribute("authUser") == null) {
-			rttr.addFlashAttribute("notFoundUser", true);
-			// 세션에 로그인 정보가 없으면
-			return "redirect:/member/login";
-		}
-		return "/member/myPage";
-	}
-	
 	
 	@PostMapping("/modify")
-	public String myModify(MemberVO member, HttpSession session, HttpServletRequest req, RedirectAttributes rttr) {
+	public String myModify(MemberVO member, HttpSession session) {
 
 		if (session.getAttribute("authUser") != null) {
-			// 세션에 정보가 있을때만
-			Map<String, Boolean> errors = new HashMap<String, Boolean>();
-			req.setAttribute("errors", errors);
-			validate(errors, member);
 
 			MemberVO user = (MemberVO) session.getAttribute("authUser");
 			log.info(user);
 			log.info(service);
 			log.info(member);
-			MemberVO findMember = service.getMemberId(user.getId());
-			boolean checkMember = service.checkMember(findMember.getId(), member.getId());
-			// 같은 아이디인지 확인
 
-			if (errors.isEmpty()) {
-				// 새롭게 set errors
-				// 에러가 없으면 수정 진행
-				if (checkMember) {
+			service.modify(member);
+			log.info("수정 서비스 실행)");
+			log.info(member);
 
-					service.modify(member);
-					log.info("수정 서비스 실행)");
-					log.info(member);
+			session.setAttribute("authUser", member);
+			// 수정된 멤버 정보를 세션에 저장
 
-					session.setAttribute("authUser", member);
-					// 수정된 멤버 정보를 세션에 저장
-
-					return "/member/myPage";
-
-				}
-			}
-		} else {
-
-			rttr.addFlashAttribute("notFoundUser", true);
-			// 세션에 로그인 정보가 없으면
-			return "redirect:/member/login";
+			return "/member/myPage";
 		}
-		log.info("수정 실패");
-		return "redirect:/index.jsp";
-		//혹시나 수정 실패시 홈으로 이동 
+		return "/member/myPage";
 	}
+
+	
 
 	// ##회원 삭제
 	@DeleteMapping("/delete")

@@ -63,19 +63,21 @@ $(document).ready(function() {
 								<form action="/member/modify" class="fv-form fv-form-bootstrap"
 									data-validation="true" accept-charset="UTF-8" method="POST"
 									novalidate="novalidate">
+									<input type="hidden" class="form-control text-content" value="${authUser.id}" readonly name="id" id="id" style="height:30px">
+														
 									<button class="fv-hidden-submit"
 										style="display: none; width: 0px; height: 0px;"></button>
-									<input type="hidden" name="utf-8" value=""> <input
+									<!-- <input type="hidden" name="utf-8" value=""> <input
 										type="hidden" name="_method" value="put"> <input
 										type="hidden" name="authenticity_token"
-										value="pTcdCOFFm5jRK2NGrJdaE8huDIWt4uGAnB9Iz0XOje17KrugLic/gMeAtovye6yysuniwlVQNzWVlILefO2Apw==">
+										value="pTcdCOFFm5jRK2NGrJdaE8huDIWt4uGAnB9Iz0XOje17KrugLic/gMeAtovye6yysuniwlVQNzWVlILefO2Apw=="> -->
 									<div class="form-group form-input-group">
 										<div class="title text-middle">닉네임</div>
 										<div class="input-wrapper text-middle">
 											<div class="row">
 												<div class="col-xs-12">
 													<input type="text" class="form-control text-content"
-														value="${authUser.nickname}" readonly name="account-input" id="nickname" style="height:30px">
+														value="${authUser.nickname}" readonly name="nickname" id="nickname" style="height:30px">
 												</div>
 											</div>
 										</div>
@@ -86,7 +88,7 @@ $(document).ready(function() {
 											<div class="row">
 												<div class="col-xs-12">
 													<input type="text" class="form-control text-content"
-														value="${authUser.password}" readonly name="account-input"
+														value="${authUser.password}" readonly name="password"
 														id="password" style="height:30px">
 												</div>
 											</div>
@@ -98,7 +100,7 @@ $(document).ready(function() {
 											<div class="row">
 												<div class="col-xs-12">
 													<input type="text" class="form-control text-content"
-														value="${authUser.name}" readonly name="account-input"
+														value="${authUser.name}" readonly name="name"
 														id="name" style="height:30px">
 												</div>
 											</div>
@@ -110,20 +112,8 @@ $(document).ready(function() {
 											<div class="row">
 												<div class="col-xs-12">
 													<input type="text" class="form-control text-content"
-														value="${authUser.phone}" readonly name="account-input"
+														value="${authUser.phone}" readonly name="phone"
 														id="phone" style="height:30px">
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="form-group form-input-group">
-										<div class="title text-middle">이메일</div>
-										<div class="input-wrapper text-middle">
-											<div class="row">
-												<div class="col-xs-12">
-													<input type="text" class="form-control text-content"
-														value="${authUser.email}" readonly name="account-input"
-														id="email" style="height:30px">
 												</div>
 											</div>
 										</div>
@@ -146,6 +136,18 @@ $(document).ready(function() {
 									</div>
 								</form>
 								<div id="modify-hidden">
+									<div class="form-group form-input-group">
+										<div class="title text-middle">이메일</div>
+										<div class="input-wrapper text-middle">
+											<div class="row">
+												<div class="col-xs-12">
+													<input type="text" class="form-control text-content"
+														value="${authUser.email}" readonly name="email"
+														id="email" style="height:30px">
+												</div>
+											</div>
+										</div>
+									</div>
 								<div class="form-group form-input-group">
 										<div class="title text-middle">나의 쿠폰</div>
 										<div class="input-wrapper text-middle">
@@ -163,9 +165,9 @@ $(document).ready(function() {
 										<div class="input-wrapper text-middle">
 											<div class="row">
 												<div class="col-xs-12">
-													<!-- <input type="text" class="form-control text-content" -->
-														<fmt:formatDate pattern="yyyy-MM-dd" value="${authUser.regDate}"/>
-														<!-- readonly name="account-inputX" id="regDate" style="height:30px"> -->
+													<input type="text" class="form-control text-content" 
+														value= "<fmt:formatDate pattern="yyyy-MM-dd" value="${authUser.regdate}"/>"
+													readonly name="regdate" id="regdate" style="height:30px">
 												</div>
 											</div>
 										</div>
@@ -229,7 +231,7 @@ $(document).ready(function() {
 	<script>
 		var isModify = false;
 		var $accountModify = $('#account-modify');
-		var $accountInput = $('[name=account-input]');
+		var $accountInput = $('#nickname, #password, #name, #phone');
 		var $modifyHidden = $('#modify-hidden');
 		var $buttonGroup = $('#button-group');
 		var $remove = $('#remove');

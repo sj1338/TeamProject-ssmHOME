@@ -23,7 +23,7 @@ public class MemberVO {
 	// 회원 이메일
 	private String email;
 	// 회원 가입일
-	private Date regDate;
+	private Date regdate;
 	
 	
 
